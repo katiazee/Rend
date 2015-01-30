@@ -7,9 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "Parse/Parse.h" //needed for PFUser
 #import <ParseUI/ParseUI.h>
-#import <UIKit/UIKit.h>
+#import <UIKit/UIKit.h>  //needed for PFUser
 #import <Foundation/Foundation.h>
+
 
 @interface ViewController ()
 
@@ -24,7 +26,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    //if (![PFUser currentUser]) { // No user logged in
+    if (![PFUser currentUser]) { // No user logged in
     // Create the log in view controller
     PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
     [logInViewController setDelegate:self]; // Set ourselves as the delegate
@@ -39,7 +41,7 @@
     
     // Present the log in view controller
     [self presentViewController:logInViewController animated:YES completion:NULL];
-  //  }
+    }
 }
 // Sent to the delegate to determine whether the log in request should be submitted to the server.
 - (BOOL)logInViewController:(PFLogInViewController *)logInController shouldBeginLogInWithUsername:(NSString *)username password:(NSString *)password {
