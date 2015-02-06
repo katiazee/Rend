@@ -521,6 +521,7 @@
 				429970011A7B26E600A79F02 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		429970021A7B26E600A79F02 /* Build configuration list for PBXNativeTarget "RendTests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +530,7 @@
 				429970041A7B26E600A79F02 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

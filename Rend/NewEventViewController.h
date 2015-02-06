@@ -16,6 +16,7 @@
 
 @interface NewEventViewController : UIViewController <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
+- (IBAction)shareLocation:(id)sender;
 
 @end
 
