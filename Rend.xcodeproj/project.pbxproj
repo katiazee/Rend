@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4215ABF71A8D3DED008A5A5F /* SimpleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4215ABF61A8D3DED008A5A5F /* SimpleTableViewController.m */; };
 		42996FE21A7B26E600A79F02 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 42996FE11A7B26E600A79F02 /* main.m */; };
 		42996FE51A7B26E600A79F02 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42996FE41A7B26E600A79F02 /* AppDelegate.m */; };
 		42996FE81A7B26E600A79F02 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42996FE71A7B26E600A79F02 /* ViewController.m */; };
@@ -33,6 +34,8 @@
 		429970271A7B2A0600A79F02 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 429970261A7B2A0600A79F02 /* Social.framework */; };
 		4299702A1A7C398000A79F02 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 429970281A7B2A4400A79F02 /* UIKit.framework */; };
 		4299702C1A7C3E0000A79F02 /* NewEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4299702B1A7C3E0000A79F02 /* NewEventViewController.m */; };
+		42FE7D4A1A8C21C500803AEF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FE7D491A8C21C500803AEF /* MapKit.framework */; };
+		42FE7D4C1A8C21D200803AEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FE7D4B1A8C21D200803AEF /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4215ABF61A8D3DED008A5A5F /* SimpleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewController.m; sourceTree = "<group>"; };
+		4215ABF81A8D3E3A008A5A5F /* SimpleTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleTableViewController.h; sourceTree = "<group>"; };
 		42996FDC1A7B26E500A79F02 /* Rend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42996FE01A7B26E600A79F02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42996FE11A7B26E600A79F02 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -79,6 +84,10 @@
 		429970281A7B2A4400A79F02 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4299702B1A7C3E0000A79F02 /* NewEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewEventViewController.m; sourceTree = "<group>"; };
 		4299702D1A7C3E1E00A79F02 /* NewEventViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewEventViewController.h; sourceTree = "<group>"; };
+		42FE7D491A8C21C500803AEF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		42FE7D4B1A8C21D200803AEF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		42FE7D4D1A8D359600803AEF /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Group.h; sourceTree = "<group>"; };
+		42FE7D4F1A8D389E00803AEF /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Group.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +95,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42FE7D4C1A8C21D200803AEF /* Foundation.framework in Frameworks */,
+				42FE7D4A1A8C21C500803AEF /* MapKit.framework in Frameworks */,
 				4299702A1A7C398000A79F02 /* UIKit.framework in Frameworks */,
 				429970271A7B2A0600A79F02 /* Social.framework in Frameworks */,
 				429970251A7B292700A79F02 /* Accounts.framework in Frameworks */,
@@ -141,6 +152,10 @@
 			children = (
 				42996FE31A7B26E600A79F02 /* AppDelegate.h */,
 				42996FE41A7B26E600A79F02 /* AppDelegate.m */,
+				42FE7D4D1A8D359600803AEF /* Group.h */,
+				4215ABF61A8D3DED008A5A5F /* SimpleTableViewController.m */,
+				4215ABF81A8D3E3A008A5A5F /* SimpleTableViewController.h */,
+				42FE7D4F1A8D389E00803AEF /* Group.m */,
 				42996FE61A7B26E600A79F02 /* ViewController.h */,
 				42996FE71A7B26E600A79F02 /* ViewController.m */,
 				4299702D1A7C3E1E00A79F02 /* NewEventViewController.h */,
@@ -182,6 +197,8 @@
 		429970051A7B272C00A79F02 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				42FE7D4B1A8C21D200803AEF /* Foundation.framework */,
+				42FE7D491A8C21C500803AEF /* MapKit.framework */,
 				429970281A7B2A4400A79F02 /* UIKit.framework */,
 				429970261A7B2A0600A79F02 /* Social.framework */,
 				429970241A7B292700A79F02 /* Accounts.framework */,
@@ -307,6 +324,7 @@
 			files = (
 				42996FE81A7B26E600A79F02 /* ViewController.m in Sources */,
 				42996FE51A7B26E600A79F02 /* AppDelegate.m in Sources */,
+				4215ABF71A8D3DED008A5A5F /* SimpleTableViewController.m in Sources */,
 				4299702C1A7C3E0000A79F02 /* NewEventViewController.m in Sources */,
 				42996FE21A7B26E600A79F02 /* main.m in Sources */,
 			);

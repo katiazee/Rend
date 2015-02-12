@@ -13,11 +13,19 @@
 #import <UIKit/UIKit.h>
 #import <ParseUI/ParseUI.h>
 #import <Parse/Parse.h>
+#import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface NewEventViewController : UIViewController <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
+@interface NewEventViewController : UIViewController <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, CLLocationManagerDelegate>
+{
+ //   CLLocationManager *locationManager;
+}
+@property (nonatomic, strong) UIButton *chooseButton;
 
-- (IBAction)shareLocation:(id)sender;
 
+    - (IBAction)chooseFriends:(id)sender;
+
+    - (IBAction)shareLocation:(id)sender;
 @end
 
 

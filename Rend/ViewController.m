@@ -41,6 +41,7 @@
     
     // Present the log in view controller
     [self presentViewController:logInViewController animated:YES completion:NULL];
+        
     }
 }
 // Sent to the delegate to determine whether the log in request should be submitted to the server.
