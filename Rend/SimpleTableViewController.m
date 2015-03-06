@@ -15,6 +15,7 @@
 //@end
 
 @implementation SimpleTableViewController
+@synthesize delegate;
 
 -(void)loadView{
     [super loadView];
@@ -42,6 +43,9 @@
     
     //[self presentViewController:nav animated:YES completion:nil];*/
     // write your code to prepare popview
+    //passes back friends array to new event view controller
+    [self.delegate addItemViewController:self didFinishEnteringItem:friends];
+    
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
      //[self.navigationController popViewControllerAnimated:YES];
 }

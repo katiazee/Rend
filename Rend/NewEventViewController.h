@@ -16,14 +16,15 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import "Group.h"
+#import "SimpleTableViewController.h"
 
-
-@interface NewEventViewController : UIViewController <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, CLLocationManagerDelegate>
+@interface NewEventViewController : UIViewController <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, CLLocationManagerDelegate, SimpleTableViewControllerDelegate>
 {
  //   CLLocationManager *locationManager;
-    Group *friendsGroup;
-    
+  //  Group *friendsGroup;
+    NSMutableArray *friends;
 }
+@property(nonatomic,retain) NSMutableArray *friends;
 @property (nonatomic, strong) UIButton *chooseButton;
 
 

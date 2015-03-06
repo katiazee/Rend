@@ -46,6 +46,7 @@
 -(void)viewDidLoad{
     
     [super viewDidLoad];
+    
         /*  locationManager = [[CLLocationManager alloc] init];
          [locationManager setDelegate:(id)self];
          [locationManager requestWhenInUseAuthorization];
@@ -61,13 +62,19 @@
          */
     
 }
+- (void)addItemViewController:(SimpleTableViewController *)controller didFinishEnteringItem:(NSMutableArray*) array
+{
+    friends = array;
+    NSLog(@"This was returned from ViewControllerB %@",friends);
+}
 
 - (IBAction)chooseFriends:(id)sender {
     
     NSLog(@"blah");
     
-    
     SimpleTableViewController *stv = [[SimpleTableViewController alloc]initWithStyle:UITableViewStylePlain];
+    stv.delegate = self;
+    stv.friends = self.friends;
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:stv];
     
     [self presentViewController:nav animated:YES completion:nil];
@@ -106,9 +113,16 @@
     [push setMessage:@"The Giants just scored!"];
     [push sendPushInBackground];
         
-    /*friendsGroup = [Group objectWithClassName:@"Event"];
-    friendsGroup[@"foo"] = @"bar";
-    [friendsGroup saveInBackground];*/
+    PFObject *event = [PFObject objectWithClassName:@"Event"];
+    event[@"friendsList"] = friends;  //TODO friends from simple table view controller
+    [event saveInBackground];
     
+        
+        for (NSString *string in friends)
+        {
+            NSLog(@"%@", string);
+            
+        }
+        NSLog(@"\n");
     }
 @end
