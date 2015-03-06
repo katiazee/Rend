@@ -15,10 +15,14 @@
 #import <Parse/Parse.h>
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import "Group.h"
+
 
 @interface NewEventViewController : UIViewController <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, CLLocationManagerDelegate>
 {
  //   CLLocationManager *locationManager;
+    Group *friendsGroup;
+    
 }
 @property (nonatomic, strong) UIButton *chooseButton;
 

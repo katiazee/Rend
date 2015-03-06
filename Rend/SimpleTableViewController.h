@@ -19,5 +19,9 @@
 #endif
 
 @interface SimpleTableViewController : PFQueryTableViewController
-
+{
+    NSMutableArray *friends;
+    
+}
+@property (nonatomic, strong) UIButton *backButton;
 @end

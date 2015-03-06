@@ -33,9 +33,9 @@
 -(void)loadView{
     [super loadView];
     
-    _chooseButton = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
-    [_chooseButton setTitle:@"blah" forState:UIControlStateNormal];
-    [_chooseButton setBackgroundColor:[UIColor blackColor]];
+    _chooseButton = [[UIButton alloc]initWithFrame:CGRectMake(100, 200, 200, 50)];
+    [_chooseButton setTitle:@"SelectFriends" forState:UIControlStateNormal];
+    [_chooseButton setBackgroundColor:[UIColor clearColor]];
     [self.view addSubview:_chooseButton];
     
     [_chooseButton addTarget:nil action:@selector(chooseFriends:) forControlEvents:UIControlEventTouchUpInside];
@@ -69,23 +69,23 @@
     
     SimpleTableViewController *stv = [[SimpleTableViewController alloc]initWithStyle:UITableViewStylePlain];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:stv];
-
+    
     [self presentViewController:nav animated:YES completion:nil];
 }
 
 - (IBAction)shareLocation:(id)sender
     {
     NSLog(@"Hello");
-    PFQuery *query = [PFInstallation query];
-    [query whereKey:@"channels" equalTo:@"global"];
+   /* PFQuery *query = [PFInstallation query];
+        [query whereKey:@"channels" equalTo:@"global"];
     
     [query whereKey:@"deviceType" equalTo:@"ios"];
     PFPush *iOSPush = [[PFPush alloc] init];
-    [iOSPush setMessage:@"Your suitcase has been filled with tiny apples!"];
+    [iOSPush setMessage:@"Katerina has asked to share your location with her."];
    //[iOSPush setChannel:@"global"];
     [iOSPush setQuery:query];
     [iOSPush sendPushInBackground];
-        
+    */
         [PFGeoPoint geoPointForCurrentLocationInBackground:^(PFGeoPoint *geoPoint, NSError *error)
          {
              if (!error)
@@ -100,11 +100,15 @@
         
     
    // [PFPush sendPushMessageToChannelInBackground:@"global" withMessage:@"Hello World!"];
-    
-   /* PFPush *push = [[PFPush alloc] init];
+
+    PFPush *push = [[PFPush alloc] init];
     [push setChannel:@"global"];
     [push setMessage:@"The Giants just scored!"];
-    [push sendPushInBackground];*/
+    [push sendPushInBackground];
+        
+    /*friendsGroup = [Group objectWithClassName:@"Event"];
+    friendsGroup[@"foo"] = @"bar";
+    [friendsGroup saveInBackground];*/
     
     }
 @end
